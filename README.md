@@ -12,3 +12,8 @@ Reusable Terraform templates for common AWS infrastructure.
 - `envs/dev`
 - `envs/stage`
 - `envs/prod`
+
+## Use Cases
+- `use-cases/multi-az-ec2` - deploy EC2 instances across multiple AZs
+- `use-cases/multi-region-db-ec2` - deploy multi-AZ RDS primary + cross-region replica
+- `use-cases/README.md` - usage examples and caveats
