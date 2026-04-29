@@ -3,7 +3,8 @@
 Reusable Terraform templates for common AWS infrastructure.
 
 ## Modules
-- `modules/vpc` - VPC + public/private subnets
+- `modules/vpc` - VPC + public/private subnets (basic)
+- `modules/vpc-advanced` - production-style VPC (IGW, NAT, route tables, tagging)
 - `modules/ecs-cluster` - ECS cluster
 - `modules/eks-cluster` - EKS cluster skeleton
 - `modules/lambda` - Lambda function + IAM role
