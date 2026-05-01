@@ -37,3 +37,27 @@ terraform apply \
 ```
 
 > Note: Cross-region replication requires valid region/provider setup, supported engine/version, and network/security hardening for production.
+
+---
+
+## 3) Kafka MSK (`use-cases/kafka-msk`)
+
+Deploys:
+- VPC + private subnets (via shared module)
+- AWS MSK (Managed Streaming for Kafka) cluster
+- Security groups for Kafka/Zookeeper access
+- CloudWatch logging for MSK
+- Optional S3 bucket for Kafka Connect/data
+
+### Usage
+```bash
+cd use-cases/kafka-msk
+terraform init
+terraform apply
+```
+
+### Outputs
+- `msk_bootstrap_brokers_tls` — TLS endpoints for client connections
+- `msk_zookeeper_connect_string` — Zookeeper connection string
+
+> Note: MSK requires subnets in at least 3 AZs. Adjust `broker_count` to match (e.g., 3, 6, 9).
